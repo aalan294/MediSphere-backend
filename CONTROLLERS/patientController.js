@@ -163,7 +163,7 @@ const addHistoryToPatient = async (req, res) => {
         await patient.save();
 
         // Generate the URL for the prescription
-        const prescribUrl = `http://localhost:3000/pharm/scanner/${prescriptionId}`;
+        const prescribUrl = `https://medisphere-frontend.onrender.com/pharm/scanner/${prescriptionId}`;
 
         // Generate the QR code
         const qrCodeDataUrl = await generateQRCode(prescribUrl);
